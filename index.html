@@ -12,6 +12,8 @@
 <body>
     <!-- id ini harus sama dengan .mount('#app') -->
     <div class="container" id="app">
+        <!-- perulangan menggunakan vue cukup pakai v-for -->
+        <!-- kenapa yang di looping adalah data karna data berisi dataProduct.products -->
         <div class="row d-flex mb-3 align-item-center" v-for="item in data" :key="item.id">
             <div class="col-sm-4">
                 <img :src="item.image" :alt="item.name" class="img-fluid d-block mx-auto">
