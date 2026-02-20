@@ -12,6 +12,12 @@
 <body>
     <!-- id ini harus sama dengan .mount('#app') -->
     <div class="container" id="app">
+        <div class="form-inline" mr-auto>
+            <label for="price" class="mr-2">Maximum Price:</label>
+            <!-- v-model="maximum" memanggil variable maximum dari data() sehingga kita bisa melakukan manipulasi melalu input form -->
+            <input type="number" id="price" v-model="maximum" class="form-control">
+        </div>
+        <input type="range" id="priceRange" v-model="maximum" class="form-range mt-3 mb-3" min="0" max="200">
         <div v-for="item in products" :key="item.id">
             <div class="row d-flex mb-3 align-item-center" v-if="parseFloat(item.price) <= maximum">
                 <div class="col-sm-4">
